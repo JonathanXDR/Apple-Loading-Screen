@@ -1,11 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
   background-color: #000;
 }
 
@@ -32,43 +31,26 @@ ion-icon {
 .loading-bar:after {
   content: ' ';
   display: block;
-  width: 100%;
+  width: 0%;
   height: 5px;
   background-color: #fff;
   border-radius: 4px;
-  animation: load 15s linear;
+  animation: load 7s linear;
+  /* animation-delay: 3s; */
+}
+
+#audio {
+  position: absolute;
+  z-index: -9999;
+  display: none;
 }
 
 @keyframes load {
   0% {
     width: 0;
   }
-  10% {
-    width: 5%;
-  }
-  20% {
-    width: 12%;
-  }
-  30% {
+  85% {
     width: 20%;
-  }
-  40% {
-    width: 29%;
-  }
-  50% {
-    width: 39%;
-  }
-  60% {
-    width: 50%;
-  }
-  70% {
-    width: 62%;
-  }
-  80% {
-    width: 75%;
-  }
-  90% {
-    width: 89%;
   }
   100% {
     width: 100%;
